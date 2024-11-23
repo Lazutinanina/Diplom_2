@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class IngredientClient extends RestClient {
 
-    private final String INGREDIENTS = "/api/ingredients";
+    public static final String INGREDIENTS = "/api/ingredients";
 
     public Response sendGetToIngredients() {
         return reqSpec

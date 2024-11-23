@@ -4,7 +4,7 @@ import io.restassured.response.Response;
 import rest.RestClient;
 
 public class UserClient extends RestClient {
-    private final String AUTH = "/api/auth";
+    public static final String AUTH = "/api/auth";
 
     @Step("Авторизация пользователя")
     public Response postToLogin(UserCredentials credentials) {
@@ -25,11 +25,9 @@ public class UserClient extends RestClient {
     }
 
     @Step("Удаление пользователя")
-    public void deleteUser(User user, String accessToken) {
+    public void deleteUser(String accessToken) {
          reqSpec
             .header("Authorization", accessToken)
-            .body(user)
-            .when()
             .delete(AUTH + "/user");
     }
 

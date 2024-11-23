@@ -3,7 +3,7 @@ import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.given;
 
 public class RestClient {
-    protected final String URL = "https://stellarburgers.nomoreparties.site/";
+    public static final String URL = "https://stellarburgers.nomoreparties.site/";
     protected final RequestSpecification reqSpec = given()
             .baseUri(URL)
             .log().all()

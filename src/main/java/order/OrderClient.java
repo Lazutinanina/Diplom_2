@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class OrderClient extends RestClient {
-    private final String ORDERS = "/api/orders";
+    public static final String ORDERS = "/api/orders";
     @Step("Создаем заказ")
     public Response sendPostToCreateOrders(Map<String, List<String>> ingredients, String accessToken) {
         return reqSpec

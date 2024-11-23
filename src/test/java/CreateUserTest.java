@@ -28,7 +28,7 @@ public class CreateUserTest {
                 .body("success", is(true));
 
         String token = response.body().path("accessToken");
-        userClient.deleteUser(user, token);
+        userClient.deleteUser(token);
     }
 
     @Test

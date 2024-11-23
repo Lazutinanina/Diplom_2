@@ -16,6 +16,6 @@ public class UserTest {
 
     @After
     public void tearDown() {
-        userClient.deleteUser(user, token);
+        userClient.deleteUser(token);
     }
 }
